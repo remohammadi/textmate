@@ -1,0 +1,9 @@
+TARGET_NAME  = CommitWindow
+SOURCES      = src/*.mm
+LINK        += bundles document settings OakFoundation OakTextView
+CP_Resources = resources/*
+FRAMEWORKS   = Cocoa
+
+LN_FLAGS         -= -Wl,-dead_strip_dylibs
+LN_FLAGS         += -rpath @loader_path/../../../../Frameworks
+
