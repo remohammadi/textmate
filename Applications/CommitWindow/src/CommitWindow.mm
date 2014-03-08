@@ -67,6 +67,7 @@
 	bundles::set_index(index.first, index.second);
 
 	documentView.textView.delegate = self;
+	documentView.textView.font = [NSFont userFixedPitchFontOfSize:12];
 	commitMessage = document::document_ptr();
 
 	std::string file_type = "text.plain";
