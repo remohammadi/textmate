@@ -61,7 +61,7 @@
 		paths.push_back(path::join(path, "Bundles"));
 
 	plist::cache_t cache;
-	cache.load(path::join(path::home(), "Library/Caches/com.macromates.TextMate/BundlesIndex.plist"));
+	cache.load_capnp(path::join(path::home(), "Library/Caches/com.macromates.TextMate/BundlesIndex.binary"));
 
 	auto index = create_bundle_index(paths, cache);
 	bundles::set_index(index.first, index.second);
